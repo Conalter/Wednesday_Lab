@@ -20,6 +20,7 @@ class Customer
   end
 
   def buys_a_drink(pub)
+
     if age >= 18                    # Simple if statement, to check customer age
       drink = pub.remove_a_drink
       if drink.name == "Guinness"
@@ -29,13 +30,16 @@ class Customer
       elsif drink.name == "Stella Artois"
         @sober[:bac] += 4
       end
+
       status_update()
       @pint_supply << drink.name
       @wallet -= drink.price
       pub.till_increase(drink.price)
+      
     else
       return "No the night mate."        # If this is written as 'puts', ruby takes the last value of the if statement and gives back nil
     end
+
   end
 
   def status_update()

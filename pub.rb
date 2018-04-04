@@ -31,7 +31,11 @@ class Pub
   end
 
   def remove_a_drink()
-    return @drinks.pop()
+    @drinks.pop()
+  end
+
+  def stock_count()
+    return @drinks.count()
   end
 
 

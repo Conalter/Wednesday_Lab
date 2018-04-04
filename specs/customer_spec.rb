@@ -25,9 +25,10 @@ class CustomerTest < MiniTest::Test
 
   def test_buy_drink_from_pub()
     @customer.buys_a_drink(@pub)
-    assert_equal(1, @customer.pint_supply())
-    assert_equal(5, @customer.wallet)
-    assert_equal(505, @pub.till)
+    assert_equal(1, @customer.pint_supply())  #Proof of customer gaining pint
+    assert_equal(5, @customer.wallet)         #Proof of wallet decreasing
+    assert_equal(505, @pub.till)              #Proof of till increasing
+    assert_equal(2, @pub.stock_count)         #Proof of drinks decreasing
   end
 
 end

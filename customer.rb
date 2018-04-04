@@ -19,6 +19,7 @@ class Customer
     @pint_supply << drink.name
     @wallet -= drink.price
     pub.till_increase(drink.price)
+    
   end
 
 end

@@ -12,21 +12,27 @@ class Pub
   def drinks_name()
     result = []
     for drink in @drinks
-      result = result + [drink[:name]]
+      result = result << drink.name
     end
+    p @drinks
     return result
   end
 
   def drinks_cost
     result = []
-    for price in @drinks
-      result = result << price[:price]
+    for drink in @drinks
+      result = result << drink.price
     end
     return result
   end
 
   def till_increase(cash)
-    return @till + cash
+    @till += cash
   end
+
+  def remove_a_drink()
+    return @drinks.pop()
+  end
+
 
 end

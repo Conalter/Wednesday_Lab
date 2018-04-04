@@ -14,7 +14,6 @@ class Pub
     for drink in @drinks
       result = result << drink.name
     end
-    p @drinks
     return result
   end
 

@@ -5,14 +5,9 @@ require_relative("../drink.rb")
 class PubTest < MiniTest::Test
 
     def setup
-      # drink = [
-              # {name: "Guinness", price: 4},
-              #   {name: "Tennents", price: 3},
-              #     {name: "Stella Artois", price: 5}
-              #   ]
-      drink1 = Drink.new("Guinness", 4)
-      drink2 = Drink.new("Tennents", 3)
-      drink3 = Drink.new("Stella Artois", 5)
+      drink1 = Drink.new("Guinness", 4, 5)
+      drink2 = Drink.new("Tennents", 3, 3)
+      drink3 = Drink.new("Stella Artois", 5, 4)
       @drinks = [drink1, drink2, drink3]
       @pub = Pub.new("The Swan & Pedo", 500, @drinks)
     end

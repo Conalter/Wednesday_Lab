@@ -25,4 +25,8 @@ class Pub
     return result
   end
 
+  def till_increase(cash)
+    return @till + cash
+  end
+
 end

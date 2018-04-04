@@ -3,12 +3,12 @@ class Customer
 
   attr_reader :name, :wallet
 
-  def initialize
-    @anme = name
+  def initialize(name, wallet)
+    @name = name
     @wallet = wallet
   end
 
-  
+
 
 
 end

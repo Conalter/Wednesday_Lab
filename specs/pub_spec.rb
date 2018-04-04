@@ -20,6 +20,10 @@ class PubTest < MiniTest::Test
       assert_equal(500, @pub.till)
     end
 
+    def test_till_value__increase()
+      assert_equal(550, @pub.till_increase(50))
+    end
+
     def test_drink_all_info()
       drink = {name: "Guinness", price: 4}
       assert_equal(drink, @pub.drinks[0])
@@ -32,5 +36,7 @@ class PubTest < MiniTest::Test
     def test_drink__price()
       assert_equal([4,3,5], @pub.drinks_cost)
     end
+
+
 
 end

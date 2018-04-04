@@ -7,7 +7,8 @@ require_relative("../drink.rb")
 class CustomerTest < MiniTest::Test
 
   def setup
-    @customer = Customer.new("Lyle", 10)
+    @customer = Customer.new("Lyle", 10, 30)
+    @customer2 = Customer.new("Andrew", 10, 17)
     drink1 = Drink.new("Guinness", 4)
     drink2 = Drink.new("Tennents", 3)
     drink3 = Drink.new("Stella Artois", 5)
@@ -29,6 +30,10 @@ class CustomerTest < MiniTest::Test
     assert_equal(5, @customer.wallet)         #Proof of wallet decreasing
     assert_equal(505, @pub.till)              #Proof of till increasing
     assert_equal(2, @pub.stock_count)         #Proof of drinks decreasing
+  end
+
+  def test_age_check
+    assert_equal("No the night mate.", @customer2.buys_a_drink(@pub))
   end
 
 end

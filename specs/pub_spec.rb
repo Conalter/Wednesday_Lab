@@ -9,11 +9,11 @@ class PubTest < MiniTest::Test
       drink2 = Drink.new("Tennents", 3, 3)
       drink3 = Drink.new("Stella Artois", 5, 4)
       @drinks = [drink1, drink2, drink3]
-      @pub = Pub.new("The Swan & Pedo", 500, @drinks)
+      @pub = Pub.new("The Swan & Duck", 500, @drinks)
     end
 
     def test_pub_name()
-      assert_equal("The Swan & Pedo", @pub.name)
+      assert_equal("The Swan & Duck", @pub.name)
     end
 
     def test_till_value()
